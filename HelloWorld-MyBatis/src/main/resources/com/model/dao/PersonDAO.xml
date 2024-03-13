@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.model.dao.PersonDAO">
+    <resultMap id="personResultMap" type="com.model.dto.PersonDTO">
+        <id property="entranceCode" column="ENTRANCE_CODE"/>
+        <result property="ticketCode" column="TICKET_CODE"/>
+        <result property="personName" column="PERSON_NAME"/>
+        <result property="personAge" column="PERSON_AGE"/>
+        <result property="personGender" column="PERSON_GENDER"/>
+        <result property="personHeight" column="PERSON_HEIGHT"/>
+    </resultMap>
+
+    <insert id="insertPerson" parameterType="com.model.dto.PersonDTO">
+        INSERT INTO ENTRANCE_INFO (
+            ENTRANCE_CODE
+            ,TICKET_CODE
+            ,PERSON_NAME
+            ,PERSON_AGE
+            ,PERSON_GENDER
+            ,PERSON_HEIGHT
+        )
+        VALUES (
+            #{ entranceCode }
+            , #{ ticketCode }
+            , #{ personName }
+            , #{ personAge }
+            , #{ personGender }
+            , #{ personHeight }
+        )
+    </insert>
+
+    <select id="selectAllPerson" resultMap="personResultMap">
+        SELECT
+            ENTRANCE_CODE
+            , TICKET_CODE
+            , PERSON_NAME
+            , PERSON_AGE
+            , PERSON_GENDER
+            , PERSON_HEIGHT
+        FROM
+            ENTRANCE_INFO
+        ORDER BY
+            ENTRANCE_CODE
+    </select>
+</mapper>

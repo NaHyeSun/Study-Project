@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.model.dao.TicketDAO">
+    <resultMap id="ticketResultMap" type="com.model.dto.TicketDTO">
+        <id property="ticketCode" column="TICKET_CODE"/>
+        <result property="ticketSort" column="TICKET_SORT"/>
+        <result property="ticketPrice" column="TICKET_PRICE"/>
+        <result property="ticketDate" column="TICKET_DATE"/>
+    </resultMap>
+
+    <select id="selectAllTicket" resultMap="ticketResultMap">
+        SELECT
+            *
+        FROM
+            TICKET_INFO
+    </select>
+</mapper>
