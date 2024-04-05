@@ -17,24 +17,24 @@
             margin-left: 25%;
         }
 
-
+        
         table {
             border-collapse: collapse;
             border-spacing: 0;
         }
-
+        
         .container {
             width: 1100px;
             margin: 0 auto;
         }
-
+        
         .board-table {
             font-size: 12px;
             width: 100%;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
         }
-
+        
         .board-table a {
             color: #333;
             display: inline-block;
@@ -42,45 +42,45 @@
             word-break: break-all;
             vertical-align: middle;
         }
-
+        
         .board-table a:hover {
             text-decoration: underline;
         }
-
+        
         .board-table th {
             text-align: center;
         }
-
+        
         .board-table .th-num {
             width: 70px;
             text-align: center;
         }
-
+        
         .board-table .th-date {
             width: 80px;
         }
-
+        
         .board-table th,
         .board-table td {
             padding: 14px 0;
         }
-
+        
         .board-table tbody td {
             border-top: 1px solid #e7e7e7;
             text-align: center;
         }
-
+        
         .board-table tbody th {
             padding-left: 28px;
             padding-right: 14px;
             border-top: 1px solid #e7e7e7;
             text-align: left;
         }
-
+        
         .board-table tbody th p {
             display: none;
         }
-
+        
         * {
             list-style: none;
             text-decoration: none;
@@ -88,25 +88,21 @@
             margin: 0;
             box-sizing: border-box;
         }
-
+        
         .clearfix:after {
             content: '';
             display: block;
             clear: both;
         }
-
+        
         .container2 {
             width: 1100px;
             margin: 0 auto;
         }
-
-        .button-write {
-            background: #EEEEEE;
-            color: black;
-            float: right;
-            border: none;
-            width: 60px;
-            height: 25px
+        
+        .b-title {
+            width: 300px;
+            font-weight: bold
         }
 
         .category-select-btn {
@@ -114,12 +110,14 @@
             height: 30px;
 
         }
-
-        .b-title {
-            width: 300px;
-            font-weight: bold
+        #wrapper {
+            height: auto;
+            min-height:100%;
+            padding-bottom: 10px;
+            
         }
-    </style>
+        
+        </style>
 
 
 </head>
@@ -176,7 +174,7 @@
         <div>
             <table style="border-bottom: 1px solid;">
                 <th>
-                <td>리뷰 게시판</td>
+                <td>공지사항</td>
                 </th>
             </table>
 
@@ -186,7 +184,7 @@
 
         <div class="hp_mb20_1">
 
-            <div class="b-title">리뷰 목록</div>
+            <div class="b-title">공지 목록</div>
 
             <div class="category-select-btn">
 
@@ -218,40 +216,41 @@
                     <tbody>
                         <tr>
                             <td>3</td>
-                            <th><a href="#!">DIY키트 반지 만들기 후기~ </a>
+                            <th><a href="#!">원데이 클래스 환불 규정 안내 </a>
                             </th>
-                            <td>DIY키트</td>
-                            <td>김해인</td>
-                            <td>2024.03.01</td>
+                            <td>원데이클래스</td>
+                            <td>관리자</td>
+                            <td>2024.03.27</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <th><a href="#!">돌고래 목걸이 상품 후기 </a>
+                            <th><a href="#!">연휴 배송 일정 공지 </a>
                             </th>
-                            <td>상품</td>
-                            <td>강신우</td>
-                            <td>2024.02.18</td>
+                            <td>일반</td>
+                            <td>관리자</td>
+                            <td>2024.01.17</td>
                         </tr>
 
                         <tr>
                             <td>1</td>
-                            <th><a href="#!">원데이 클래스 이용후기~ </a>
+                            <th><a href="#!">회원 등급 안내 </a>
                             </th>
-                            <td>원데이클래스</td>
-                            <td>신하리</td>
-                            <td>2024.01.17</td>
+                            <td>일반</td>
+                            <td>관리자</td>
+                            <td>2024.01.01</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="hp_mb20"></div>
-        <div>
-            <button onclick="" class="button-write">글쓰기</button>
-        </div>
+
 
     </div>
 
+    <div id="wrapper">
+        <div></div>
+    </div>
 
 
     <footer class="footer">

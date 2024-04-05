@@ -12,7 +12,7 @@
 
     <style>
         .title-view {
-            padding: 25px 20px 70px;
+            padding: 25px 20px 30px;
             position: relative;
             margin-left: 25%;
         }
@@ -50,14 +50,6 @@
             text-align: center;
         }
 
-        .board-table .th-num {
-            width: 70px;
-            text-align: center;
-        }
-
-        .board-table .th-date {
-            width: 80px;
-        }
 
         .board-table th,
         .board-table td {
@@ -98,9 +90,10 @@
             width: 1100px;
             margin: 0 auto;
         }
+
         .category-select-btn {
             float: right;
-            height: 30px;
+            height: 50px;
 
         }
 
@@ -109,16 +102,40 @@
             font-weight: bold
         }
 
-        .b-title2 {
-            width: 500px;
-            font-weight: bold
-        }
-
         #wrapper {
             height: auto;
             min-height: 100%;
-            padding-bottom: 10px;
+            padding-bottom: 30px;
+        }
 
+        .a1 {
+            font-size: 13px;
+            line-height: 23px;
+        }
+
+        .a3 {
+            padding-left: 185px;
+        }
+
+        .a4 {
+            font-size: 13px;
+            padding-top: 20px;
+        }
+
+        #button-submit2 {
+            background: black;
+            color: #EEEEEE;
+            float: right;
+            border: none;
+            width: 60px;
+            height: 25px;
+
+            border-radius: 5px;
+        }
+        .b2 {
+            padding-right: 150px;
+            padding-bottom:150px;
+            padding-top: 10px;
         }
     </style>
 
@@ -176,7 +193,7 @@
         <div>
             <table style="border-bottom: 1px solid;">
                 <th>
-                <td>게시판</td>
+                <td>1:1 문의 작성</td>
                 </th>
             </table>
 
@@ -184,132 +201,74 @@
         <br>
         <br>
 
+        <div class="hp_mb20_1"></div>
 
 
-        <div class="hp_mb20_1">
-
-            <div class="b-title">1:1 문의 사항</div>
-
-        </div>
-
-        <div id="board-list">
-            <div class="containor2">
-                <table class="board-table">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="th-num">번호</th>
-                            <th scope="col" class="th-title">제목</th>
-                            <th scope="col" class="th-category">분류</th>
-                            <th scope="col" class="th-writer">작성자</th>
-                            <th scope="col" class="th-date">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <th><a href="#!">목걸이 사이즈 문의 합니다. </a>
-                            </th>
-                            <td>상품</td>
-                            <td>진달래</td>
-                            <td>2024.03.29</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <th><a href="#!">배송문의</a>
-                            </th>
-                            <td>상품</td>
-                            <td>김송희</td>
-                            <td>2024.02.05</td>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <th><a href="#!">원데이 클래스 과정 문의 합니다. </a>
-                            </th>
-                            <td>원데이클래스</td>
-                            <td>서미래</td>
-                            <td>2024.01.17</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="a1">제목
+            <div>
+                <input type="text" style="width: 350px; height: 24px;" placeholder="제목을 입력하세요.">
             </div>
-        </div>
-        <div class="hp_mb20"></div>
-        <div>
-            <button onclick="location.href='INQUIRY_01mainview.html'" class="button-write">더보기</button>
-        </div>
+            <br>
 
+            <span class="a2">글쓴이</span>
+            <span class="a3">분류</span>
+
+            <br>
+            <span><input type="text" style="width: 220px; height: 24px;" placeholder="이름을 입력하세요.">
+
+                <select name="category-select" style="width: 125px; height: 24px;" id="cs1">
+                    <option value="nomal">일반</option>
+                    <option value="product">상품</option>
+                    <option value="diykit">DIY키트</option>
+                    <option value="onedayclass">원데이 클래스</option>
+                    
+                </select>
+                <br>
+                <div class="a4">글 작성</div>
+
+                <div class="grow-wrap">
+                    <textarea onInput="this.parentNode.dataset.replicatedValue = this.value"
+                        style="width: 600px; height:270px;"></textarea>
+                </div>
+
+            </span>
+        </div>
     </div>
 
-
-    <div class="title-view">
-        <div>
-            <table style="border-bottom: 1px solid;"></table>
-        </div>
-        <br>
-        <br>
-
-        <div class="hp_mb20_1">
-
-            <div class="b-title2">리뷰 게시판</div>
-
-
-        </div>
-
-        <div id="board-list">
-            <div class="containor2">
-                <table class="board-table">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="th-num">번호</th>
-                            <th scope="col" class="th-title">제목</th>
-                            <th scope="col" class="th-category">분류</th>
-                            <th scope="col" class="th-writer">작성자</th>
-                            <th scope="col" class="th-date">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <th><a href="#!">DIY키트 반지 만들기 후기~ </a>
-                            </th>
-                            <td>DIY키트</td>
-                            <td>김해인</td>
-                            <td>2024.03.01</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <th><a href="#!">돌고래 목걸이 상품 후기 </a>
-                            </th>
-                            <td>상품</td>
-                            <td>강신우</td>
-                            <td>2024.02.18</td>
-                        </tr>
-
-                        <tr>
-                            <td>1</td>
-                            <th><a href="#!">원데이 클래스 이용후기~ </a>
-                            </th>
-                            <td>원데이클래스</td>
-                            <td>신하리</td>
-                            <td>2024.01.17</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="hp_mb20"></div>
-        <div>
-            <button onclick="location.href='REVIEW_01mainview.html'" class="button-write">더보기</button>
-        </div>
-
+    <!-- 등록버튼 -->
+    <div class="b2">
+        <button onclick="openSaveModal()" id="button-submit2">등록</button>
     </div>
+
+    <div id="savemodal" class="modal" style="display: none;">
+        <div class="modal_content" style="width: 200px;">
+            <p>등록 하시겠습니까?</p>
+            <br>
+
+            <button id="save_button" onclick="saveChanges()">네</button>
+            <button id="cancel_button" onclick="closeSaveModal()">아니오</button>
+        </div>
+    </div>
+    <script>
+        function openSaveModal() {
+            document.getElementById("savemodal").style.display = "block";
+        }
+
+        function closeSaveModal() {
+            document.getElementById("savemodal").style.display = "none";
+        }
+
+        function saveChanges() {
+            // 저장된 정보를 조회페이지에 반영하는 로직 추가하면됨
+            alert("등록이 완료 되었습니다.~ ")
+            closeSaveModal();
+        }
+    </script>
+
 
     <div id="wrapper">
         <div></div>
     </div>
-
-
 
 
 

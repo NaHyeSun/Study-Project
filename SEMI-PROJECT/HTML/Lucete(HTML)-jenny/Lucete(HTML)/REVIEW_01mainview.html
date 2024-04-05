@@ -17,6 +17,7 @@
             margin-left: 25%;
         }
 
+
         table {
             border-collapse: collapse;
             border-spacing: 0;
@@ -98,6 +99,7 @@
             width: 1100px;
             margin: 0 auto;
         }
+
         .category-select-btn {
             float: right;
             height: 30px;
@@ -108,19 +110,14 @@
             width: 300px;
             font-weight: bold
         }
-
-        .b-title2 {
-            width: 500px;
-            font-weight: bold
-        }
-
         #wrapper {
             height: auto;
-            min-height: 100%;
+            min-height:100%;
             padding-bottom: 10px;
-
+            
         }
     </style>
+
 
 </head>
 
@@ -176,7 +173,7 @@
         <div>
             <table style="border-bottom: 1px solid;">
                 <th>
-                <td>게시판</td>
+                <td>리뷰 게시판</td>
                 </th>
             </table>
 
@@ -184,75 +181,22 @@
         <br>
         <br>
 
-
-
         <div class="hp_mb20_1">
 
-            <div class="b-title">1:1 문의 사항</div>
+            <div class="b-title">리뷰 목록</div>
 
-        </div>
+            <div class="category-select-btn">
 
-        <div id="board-list">
-            <div class="containor2">
-                <table class="board-table">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="th-num">번호</th>
-                            <th scope="col" class="th-title">제목</th>
-                            <th scope="col" class="th-category">분류</th>
-                            <th scope="col" class="th-writer">작성자</th>
-                            <th scope="col" class="th-date">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <th><a href="#!">목걸이 사이즈 문의 합니다. </a>
-                            </th>
-                            <td>상품</td>
-                            <td>진달래</td>
-                            <td>2024.03.29</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <th><a href="#!">배송문의</a>
-                            </th>
-                            <td>상품</td>
-                            <td>김송희</td>
-                            <td>2024.02.05</td>
-                        </tr>
+                <select name="category-select" id="cs1">
+                    <option value="allselect">전체조회</option>
+                    <option value="nomal">일반</option>
+                    <option value="product">상품</option>
+                    <option value="diykit">DIY키트</option>
+                    <option value="onedayclass">원데이 클래스</option>
+                    <option value="event">이벤트</option>
+                </select>
 
-                        <tr>
-                            <td>1</td>
-                            <th><a href="#!">원데이 클래스 과정 문의 합니다. </a>
-                            </th>
-                            <td>원데이클래스</td>
-                            <td>서미래</td>
-                            <td>2024.01.17</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
-        </div>
-        <div class="hp_mb20"></div>
-        <div>
-            <button onclick="location.href='INQUIRY_01mainview.html'" class="button-write">더보기</button>
-        </div>
-
-    </div>
-
-
-    <div class="title-view">
-        <div>
-            <table style="border-bottom: 1px solid;"></table>
-        </div>
-        <br>
-        <br>
-
-        <div class="hp_mb20_1">
-
-            <div class="b-title2">리뷰 게시판</div>
-
 
         </div>
 
@@ -300,7 +244,7 @@
         </div>
         <div class="hp_mb20"></div>
         <div>
-            <button onclick="location.href='REVIEW_01mainview.html'" class="button-write">더보기</button>
+            <button onclick="" class="button-write">글쓰기</button>
         </div>
 
     </div>
@@ -308,9 +252,6 @@
     <div id="wrapper">
         <div></div>
     </div>
-
-
-
 
 
     <footer class="footer">

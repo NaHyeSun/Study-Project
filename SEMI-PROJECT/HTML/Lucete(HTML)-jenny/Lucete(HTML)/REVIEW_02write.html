@@ -12,29 +12,28 @@
 
     <style>
         .title-view {
-            padding: 25px 20px 70px;
+            padding: 25px 20px 30px;
             position: relative;
             margin-left: 25%;
         }
 
-        
         table {
             border-collapse: collapse;
             border-spacing: 0;
         }
-        
+
         .container {
             width: 1100px;
             margin: 0 auto;
         }
-        
+
         .board-table {
             font-size: 12px;
             width: 100%;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
         }
-        
+
         .board-table a {
             color: #333;
             display: inline-block;
@@ -42,45 +41,37 @@
             word-break: break-all;
             vertical-align: middle;
         }
-        
+
         .board-table a:hover {
             text-decoration: underline;
         }
-        
+
         .board-table th {
             text-align: center;
         }
-        
-        .board-table .th-num {
-            width: 70px;
-            text-align: center;
-        }
-        
-        .board-table .th-date {
-            width: 80px;
-        }
-        
+
+
         .board-table th,
         .board-table td {
             padding: 14px 0;
         }
-        
+
         .board-table tbody td {
             border-top: 1px solid #e7e7e7;
             text-align: center;
         }
-        
+
         .board-table tbody th {
             padding-left: 28px;
             padding-right: 14px;
             border-top: 1px solid #e7e7e7;
             text-align: left;
         }
-        
+
         .board-table tbody th p {
             display: none;
         }
-        
+
         * {
             list-style: none;
             text-decoration: none;
@@ -88,39 +79,75 @@
             margin: 0;
             box-sizing: border-box;
         }
-        
+
         .clearfix:after {
             content: '';
             display: block;
             clear: both;
         }
-        
+
         .container2 {
             width: 1100px;
             margin: 0 auto;
         }
-        
-        .button-write {
-            background: #EEEEEE;
-            color: black;
+
+        .category-select-btn {
             float: right;
-            border: none;
-            width: 60px;
-            height: 25px
+            height: 50px;
+
         }
+
         .b-title {
             width: 300px;
             font-weight: bold
         }
 
-        .category-select-btn {
-            float: right;
-            height: 30px;
-
+        #wrapper {
+            height: auto;
+            min-height: 100%;
+            padding-bottom: 30px;
         }
-        
-        </style>
 
+        .a1 {
+            font-size: 13px;
+            line-height: 23px;
+        }
+
+        .a3 {
+            padding-left: 185px;
+        }
+
+        .a4 {
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        .a5 {
+            padding-left: 100px;
+        }
+
+
+        .b2 {
+            padding-right: 150px;
+            padding-bottom:150px;
+            padding-top: 10px;
+        }
+        #button-submit2 {
+    background: black;
+    color: #EEEEEE;
+    float: right;
+    border: none;
+    width: 60px;
+    height: 25px;
+    
+    border-radius: 5px;
+}
+.file-button {
+    margin-left: 270px;
+    
+}
+
+        
+    </style>
 
 </head>
 
@@ -176,7 +203,7 @@
         <div>
             <table style="border-bottom: 1px solid;">
                 <th>
-                <td>공지사항</td>
+                <td>리뷰 작성</td>
                 </th>
             </table>
 
@@ -184,70 +211,95 @@
         <br>
         <br>
 
-        <div class="hp_mb20_1">
+        <div class="hp_mb20_1"></div>
 
-            <div class="b-title">공지 목록</div>
 
-            <div class="category-select-btn">
+        <div class="a1">제목
+            <div>
+                <input type="text" style="width: 480px; height: 24px;" placeholder="제목을 입력하세요.">
+            </div>
+            <br>
 
-                <select name="category-select" id="cs1">
-                    <option value="allselect">전체조회</option>
+            <span class="a2">글쓴이</span>
+            <span class="a3">분류</span>
+            <span class="a5">상품명</span>
+
+            <br>
+            <span><input type="text" style="width: 220px; height: 24px;" placeholder="이름을 입력하세요.">
+
+                <select name="category-select" style="width: 125px; height: 24px;" id="cs1">
                     <option value="nomal">일반</option>
                     <option value="product">상품</option>
                     <option value="diykit">DIY키트</option>
                     <option value="onedayclass">원데이 클래스</option>
-                    <option value="event">이벤트</option>
+                    
                 </select>
+                <select name="category-select2" style="width: 125px; height: 24px;" id="cs1">
+                    <option value=""></option>
+                    <option value=""></option>
+                   
+                   
+                   
+                </select>
+                <br>
+                <div class="a4">글 작성</div>
 
-            </div>
+                <div class="grow-wrap">
+                    <textarea onInput="this.parentNode.dataset.replicatedValue = this.value"
+                        style="width: 580px; height:250px;"></textarea>
+                </div>
 
+
+            </span>
         </div>
 
-        <div id="board-list">
-            <div class="containor2">
-                <table class="board-table">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="th-num">번호</th>
-                            <th scope="col" class="th-title">제목</th>
-                            <th scope="col" class="th-category">분류</th>
-                            <th scope="col" class="th-writer">작성자</th>
-                            <th scope="col" class="th-date">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <th><a href="#!">원데이 클래스 환불 규정 안내 </a>
-                            </th>
-                            <td>원데이클래스</td>
-                            <td>관리자</td>
-                            <td>2024.03.27</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <th><a href="#!">연휴 배송 일정 공지 </a>
-                            </th>
-                            <td>일반</td>
-                            <td>관리자</td>
-                            <td>2024.01.17</td>
-                        </tr>
+    </div>
 
-                        <tr>
-                            <td>1</td>
-                            <th><a href="#!">회원 등급 안내 </a>
-                            </th>
-                            <td>일반</td>
-                            <td>관리자</td>
-                            <td>2024.01.01</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="file-button">
+    <form method="post" enctype="multipart/form-data">
+        <div class="button">
+            <label for="chooseFile">
+                
+            </label>
         </div>
-        <div class="hp_mb20"></div>
+        <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+    </form>
+</div>
 
+   <!-- 등록버튼 모달창 -->
+<div class="b2">
+    <button onclick="openSaveModal()" id="button-submit2">등록</button>
+</div>
 
+<div id="savemodal" class="modal" style="display: none;">
+    <div class="modal_content" style="width: 200px;">
+        <p>등록 하시겠습니까?</p>
+        <br>
+
+        <button id="save_button" onclick="saveChanges()">네</button>
+        <button id="cancel_button" onclick="closeSaveModal()">아니오</button>
+    </div>
+</div>
+<script>
+    function openSaveModal() {
+        document.getElementById("savemodal").style.display = "block";
+    }
+
+    function closeSaveModal() {
+        document.getElementById("savemodal").style.display = "none";
+    }
+
+    function saveChanges() {
+        // 저장된 정보를 조회페이지에 반영하는 로직 추가하면됨
+        alert("등록이 완료 되었습니다.~ 소중한 후기 감사합니다.  ")
+        closeSaveModal();
+    }
+</script>
+
+    </div>
+
+    <div id="wrapper">
+        <div></div>
     </div>
 
 
