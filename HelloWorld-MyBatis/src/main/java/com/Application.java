@@ -22,6 +22,7 @@ public class Application {
             System.out.println("6. 놀이공원 폐장");
             System.out.print("번호를 입력 하세요 : ");
             int num = sc.nextInt();
+            System.out.println("test");
 
             switch (num) {
                 case 1 :
