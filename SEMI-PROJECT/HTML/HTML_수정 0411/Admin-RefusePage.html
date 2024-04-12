@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin RevokePage</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+<style>
+    .revoke-category{
+        overflow: hidden;
+    }
+    .revoke{
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    .re-box{
+        background-color:#ffffff;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin: 1px;
+    }
+    .empty{
+        margin : 10px; 
+        padding : 10px 100px;
+        background-color:#ffffff;
+    }
+    .req-box{
+        margin-right: 30px;
+        padding: 5px;
+        background-color: #D9D9D9;
+        width: 200px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 3px solid #bbbbbb;
+    }
+    .res-box{
+        margin-right: 30px;
+        padding: 5px;
+        background-color: #D9D9D9;
+        width: 200px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 3px solid #bbbbbb;
+    }
+    .req-text{
+        position: absolute;
+        transform: translateY(-110%) translateX(-120%);
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .req{
+        position: absolute;
+        transform: translateY(-5%) translateX(40%);
+        font-size: 40px;
+        font-weight: bolder;
+        color: #D43535;
+    }
+    .res-text{
+        position: absolute;
+        transform: translateY(-110%) translateX(-120%);
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .res{
+        position: absolute;
+        transform: translateY(-5%) translateX(40%);
+        font-size: 40px;
+        font-weight: bolder;
+        color: #38C735;
+    }
+    .revoke-table{
+        overflow: hidden;
+        margin: 30px;
+        margin-top: 15px;
+    }
+    table{
+        width: 95.9%;
+        border-top: 1px solid;
+        border-collapse: collapse;
+        margin: 30px;
+    }
+    th{
+        border: 3px solid #bbbbbb;
+        padding: 20px;
+        background-color: #D9D9D9;
+    }
+    tr{
+        border: 3px solid #bbbbbb;
+        padding: 20px;
+        background-color: #F1F1F1;
+        text-align: center;
+
+    }
+    td{
+        border: 3px solid #bbbbbb;
+        padding: 20px;
+        background-color: #F1F1F1;
+        text-align: center;
+    }
+    .re-button{
+        overflow: hidden;
+        background-color: white;
+        width: 100%;
+        height: 33px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .Y_box{
+        background-color: #A2D6A7;
+        width: 130px;
+        border-radius: 12px;
+        border: 2px solid #286B11;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .N_box{
+        background-color: #E8C2C2;
+        width: 130px;
+        border-radius: 12px;
+        border: 2px solid #743838;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Y_box:hover{
+        background-color: #A9E8AF;
+        width: 130px;
+        border-radius: 12px;
+        border: 2px solid #286B11;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .N_box:hover{
+        background-color: #F3DADA;
+        width: 130px;
+        border-radius: 12px;
+        border: 2px solid #743838;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Y_text{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .N_text{
+        font-size: 15px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="containor">
+            <nav class="navbar">
+                <a href="Admin-MainPage.html"><img src="assets/image/로고 누끼(이름만).png" height="90"></a>
+                <ul class="navbar-list" style="list-style: none;">                    
+                    </li>
+                    <li class="navicon"><a href=""><img src="assets/image/로그인 아이콘.png" height="25"></a></li>
+                    <li class="searchBar" >
+                        <input type="search">
+                        <input type="submit">
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="category-banner">
+        <nav class="category-navbar">
+
+            
+            <ul class="category-list" style="list-style: none;">
+                <li class="category" style= "font-weight:bolder; font-size: 18px; background-color: transparent !important;">Category</li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Product</li>
+                <li class="category"><a href="Admin-OrderCategory-Page.html">주문관리</a></li>
+                <li class="category"><a href="Admin-ProductCategory-Page.html">상품관리</a></li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Customer</li>
+                
+                <li class="category"><a href="Admin-UserCategory-Page.html">회원관리</a></li>
+                <li class="category"><a href="1.문의_게시판_관리.html">게시판 관리</a></li>
+                <li class="category"><a href="2.리뷰_관리.html">리뷰 게시판 관리</a></li>
+                <li class="category"><a href="3.공지사항_관리.html">공지사항 관리</a></li>
+                <li class="category"><a href="4.쿠폰_관리.html">쿠폰 관리</a></li>
+                <li class="category"><a href="5.포인트_지급_관리.html">포인트 관리</a></li>
+                <li class="category"><a href="Admin-OneDayClass-Category-Page.html">원데이 클래스 관리</a></li>
+                <br><br><br><br><br><br><br>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="revoke-category">
+        <div class="revoke"><h4>&nbsp;&nbsp;환불 상품 상세 조회</h4></div>
+        <div class="empty"></div>
+        <div class="re-box">
+            <div class="req-box">
+                <p class="req-text">환불요청</p>
+                <p class="req">1건</p>
+            </div>
+            <div class="res-box">
+                <p class="res-text">환불승인</p>
+                <p class="res">1건</p>
+            </div>
+        </div>
+    </div>
+    <div class="revoke-table" style="table-layout: fixed;">
+        <table>
+            <th></th>
+            <th style="width: 40%; height: 10%;">환불 상품</th>
+            <th style="width: 20%;">회원 아이디</th>
+            <th style="width: 20%;">결제 금액</th>
+            <th style="width: 20%;">환불 일자</th>
+            <tr>
+                <td><input type="checkbox" name="revoke_check1" id="check1"></td>
+                <td></td>
+                <td>user01</td>
+                <td>이재현(id)</td>
+                <td>2024-04-04</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="revoke_check2" id="check2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="revoke_check3" id="check3"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 타임리프 넣을 것 -->
+        </table>
+        <div class="re-button">
+            <a href="" class="Y_box">
+                <p class="Y_text">환불 승인</p>
+            </a>
+            <a href="" class="N_box">
+                <p class="N_text">환불 거절</p>
+            </a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <div class="containor">
+            <p>L u c e t e</p>
+            <ul class="info" style="list-style: none;">
+                <li class="info-list" style="font-size: smaller;"><a href>이용약관</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="info-list" style="font-size: smaller;"><a href>개인정보 처리방침</a></li>
+                <br><br>
+                <li class ="info-list" style="font-size: small;">상호: 루세트(Lucete) | 대표: 김민희 | 전화: 070-012-3456 | 이메일: lucete@gmail.com</li>
+                <br>
+                <li class="info-list" style="font-size: small;">주소:2222-312,25, Insadong 3-gil, Jongno-gu, Seoul, Republic of Korea</li>
+                <br>
+                <li class="info-list" style="font-size: small;">사업자등록번호:888-06-12345 | 통신판매:2024-서울인사동-0123</li>
+            </ul>
+            
+            
+        </div>
+    </footer>
+</body>
+</html>

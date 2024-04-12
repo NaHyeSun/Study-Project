@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin OnedayClass Date Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+<style>
+    .onedayclass-date{
+        width: 700px;
+        height: auto;
+        overflow: hidden;
+    }
+    .date-container{
+        margin-left: 30px;
+    }
+    .date-table{
+        border-top: 3px solid black;
+        border-left: 2px solid #c6c6c6;
+        border-right: 2px solid #c6c6c6;
+        border-bottom: 2px solid #c6c6c6;
+        border-collapse: collapse;
+    }
+    .date-table th{
+        border: 2px solid #c6c6c6;
+        background-color: #D4EAF6;
+    }
+    .date-table td{
+        border: 2px solid #c6c6c6;
+        background-color: #f5f5f5;
+        text-align: center;
+        height: 50px;
+        width: 200px;
+    }
+    
+    .date-table input[type="date"],
+    .date-table input[type="text"]{
+        box-sizing: border-box;
+        height: 50px;
+        border: 1px solid #ccc;
+    }
+    .date-table input[type="time"]{
+        box-sizing: border-box;
+        height: 50px;
+        border: 1px solid #ccc;
+        width: 100px;
+    }
+    .date-btn{
+        margin-top: 30px;
+        height: 150px;
+        text-align: right;
+    }
+    .back-btn{
+        font-weight: bold;
+        width: 10px;
+        height: 25px;
+        background-color: #d2d2d2;
+        border: 1px solid #828282;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="containor">
+            <nav class="navbar">
+                <a href="Admin-MainPage.html"><img src="assets/image/로고 누끼(이름만).png" height="90"></a>
+                <ul class="navbar-list" style="list-style: none;">                    
+                    </li>
+                    <li class="navicon"><a href=""><img src="assets/image/로그인 아이콘.png" height="25"></a></li>
+                    <li class="searchBar" >
+                        <input type="search">
+                        <input type="submit">
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="category-banner">
+        <nav class="category-navbar">
+
+            
+            <ul class="category-list" style="list-style: none;">
+                <li class="category" style= "font-weight:bolder; font-size: 18px; background-color: transparent !important;">Category</li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Product</li>
+                <li class="category"><a href="Admin-OrderCategory-Page.html">주문관리</a></li>
+                <li class="category"><a href="Admin-ProductCategory-Page.html">상품관리</a></li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Customer</li>
+                
+                <li class="category"><a href="Admin-UserCategory-Page.html">회원관리</a></li>
+                <li class="category"><a href="1.문의_게시판_관리.html">게시판 관리</a></li>
+                <li class="category"><a href="2.리뷰_관리.html">리뷰 게시판 관리</a></li>
+                <li class="category"><a href="3.공지사항_관리.html">공지사항 관리</a></li>
+                <li class="category"><a href="4.쿠폰_관리.html">쿠폰 관리</a></li>
+                <li class="category"><a href="5.포인트_지급_관리.html">포인트 관리</a></li>
+                <li class="category"><a href="Admin-OneDayClass-Category-Page.html">원데이 클래스 관리</a></li>
+                <br><br><br><br><br><br><br>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="onedayclass-date">
+        <form class="date-container">
+            <h3>원데이 클래스 일정 확인</h3>
+            <br>
+            <h4>● 원데이 클래스 일정</h4>
+            <table class="date-table">
+                <tr>
+                    <th>일자</th>
+                    <th>시간</th>
+                    <th>담당자</th>
+                    <th>참여자 ID</th>
+                </tr>
+                <tr>
+                    <td><input type="date" name=""></td>
+                    <td><input type="time" name=""></td>
+                    <td><input type="text" name=""></td>
+                    <td><input type="text" name=""></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name=""></td>
+                    <td><input type="time" name=""></td>
+                    <td><input type="text" name=""></td>
+                    <td><input type="text" name=""></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name=""></td>
+                    <td><input type="time" name=""></td>
+                    <td><input type="text" name=""></td>
+                    <td><input type="text" name=""></td>
+                </tr>
+                <!-- 타임리프 넣을 것 -->
+            </table>
+            <div class="date-btn">
+                <a href="Admin-OnedayClass-Inquiry-Page.html" class="back-btn">뒤로가기</a>    
+            </div>
+        </form>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <div class="containor">
+            <p>L u c e t e</p>
+            <ul class="info" style="list-style: none;">
+                <li class="info-list" style="font-size: smaller;"><a href>이용약관</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="info-list" style="font-size: smaller;"><a href>개인정보 처리방침</a></li>
+                <br><br>
+                <li class ="info-list" style="font-size: small;">상호: 루세트(Lucete) | 대표: 김민희 | 전화: 070-012-3456 | 이메일: lucete@gmail.com</li>
+                <br>
+                <li class="info-list" style="font-size: small;">주소:2222-312,25, Insadong 3-gil, Jongno-gu, Seoul, Republic of Korea</li>
+                <br>
+                <li class="info-list" style="font-size: small;">사업자등록번호:888-06-12345 | 통신판매:2024-서울인사동-0123</li>
+            </ul>
+            
+            
+        </div>
+    </footer>
+</body>
+</html>

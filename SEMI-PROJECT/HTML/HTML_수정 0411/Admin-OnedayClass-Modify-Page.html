@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin OneDayClass Modify Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+<style>
+    .inquiry-category{
+        width: 670px;
+        border-top: 3px solid black;
+        border-bottom: 2px solid#C2C2C2;
+        border-right: 2px solid #C2C2C2;
+        border-left: 2px solid#C2C2C2;
+        border-collapse: collapse;
+    }
+    .inquiry-category td{
+        border: 2px solid #C2C2C2;
+        padding: 0;
+    }
+    .select-category{
+        width: 100%;
+        box-sizing: border-box;
+        height: 30px;
+    }
+    .onedayclass-container{
+        width: 700px;
+        height: auto;
+        overflow: hidden;
+    }
+    .onedayclass-form{
+        margin-left: 30px;
+    }
+    .class-table{
+        width: 670px;
+        border-top: 3px solid black;
+        border-bottom: 2px solid#C2C2C2;
+        border-right: 2px solid #C2C2C2;
+        border-left: 2px solid#C2C2C2;
+        border-collapse: collapse;
+    }
+    .label-color{
+        background-color: #d2d2d2;
+        text-align: center;
+        font-weight: bold;
+    }
+    .class-table td{
+        border: 2px solid #838383;
+        padding: 0;
+    }
+    .class-table input[type="text"]{
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        border: 1px solid #ccc; 
+    }
+    .class-table input[type="date"],
+    .class-table input[type="time"],
+    .class-table input[type="number"]{
+        width: 200px;
+        height: 40px;
+        box-sizing: border-box;
+    }
+    .class-table #class-desc{
+        width: 100%;
+        height: 150px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+    .insert-btn{
+        text-align: right;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .submit-btn{
+        border: 1px solid #828282;
+        background-color: #d2d2d2;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="containor">
+            <nav class="navbar">
+                <a href="Admin-MainPage.html"><img src="assets/image/로고 누끼(이름만).png" height="90"></a>
+                <ul class="navbar-list" style="list-style: none;">                    
+                    </li>
+                    <li class="navicon"><a href=""><img src="assets/image/로그인 아이콘.png" height="25"></a></li>
+                    <li class="searchBar" >
+                        <input type="search">
+                        <input type="submit">
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="category-banner">
+        <nav class="category-navbar">
+
+            
+            <ul class="category-list" style="list-style: none;">
+                <li class="category" style= "font-weight:bolder; font-size: 18px; background-color: transparent !important;">Category</li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Product</li>
+                <li class="category"><a href="Admin-OrderCategory-Page.html">주문관리</a></li>
+                <li class="category"><a href="Admin-ProductCategory-Page.html">상품관리</a></li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Customer</li>
+                
+                <li class="category"><a href="Admin-UserCategory-Page.html">회원관리</a></li>
+                <li class="category"><a href="1.문의_게시판_관리.html">게시판 관리</a></li>
+                <li class="category"><a href="2.리뷰_관리.html">리뷰 게시판 관리</a></li>
+                <li class="category"><a href="3.공지사항_관리.html">공지사항 관리</a></li>
+                <li class="category"><a href="4.쿠폰_관리.html">쿠폰 관리</a></li>
+                <li class="category"><a href="5.포인트_지급_관리.html">포인트 관리</a></li>
+                <li class="category"><a href="Admin-OneDayClass-Category-Page.html">원데이 클래스 관리</a></li>
+                <br><br><br><br><br><br><br>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="onedayclass-container">
+        <div class="onedayclass-form">
+            <h2>원데이 클래스 수정</h2>
+            <form>
+                <table class="inquiry-category">
+                    <tr>
+                        <td class="label-color">카테고리 선택</td>
+                        <td>
+                            <select class="select-category" name="PROD_CATEGORY">
+                                <option value="">반지 만들기 원데이 클래스</option>
+                                <option value="">목걸이 만들기 원데이 클래스</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <br>
+            <h4>● 상세 정보 수정</h4>
+            <form>
+                <table class="class-table">
+                    <tr>
+                        <td class="label-color" style="height: 50px;"><label for="CLASS_NAME">클래스명</label></td>
+                        <td><input type="text" name="CLASS_NAME"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-color" style="height: 40px;"><label for="class-date">날짜</label></td>
+                        <td>
+                            <input type="date" name="START_DATE" placeholder="시작">
+                            <span style="font-weight: bold;">~</span>
+                            <input type="date" name="END_DATE" placeholder="끝">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-color" style="height: 40px;"><label for="class-time">시간</label></td>
+                        <td><input type="time" id="class-time" name="class-time"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-color" style="height: 40px;"><label for="PROD_PRICE">금액</label></td>
+                        <td><input type="number" name="PROD_PRICE" placeholder="금액을 입력하세요"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-color" style="height: 150px;"><label for="PROD_ACCOUNT">상세 설명</label></td>
+                        <td><textarea id="class-desc" name="PROD_ACCOUNT"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="label-color" style="height: 40px;"><label for="FILE_NAME">파일 첨부</label></td>
+                        <td><input type="file" name="FILE_NAME"></td>
+                    </tr>
+                    <!-- 타임리프 넣을 것 -->
+                </table>
+                <div class="insert-btn">
+                    <button type="submit" class="submit-btn">클래스 수정</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <div class="containor">
+            <p>L u c e t e</p>
+            <ul class="info" style="list-style: none;">
+                <li class="info-list" style="font-size: smaller;"><a href>이용약관</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="info-list" style="font-size: smaller;"><a href>개인정보 처리방침</a></li>
+                <br><br>
+                <li class ="info-list" style="font-size: small;">상호: 루세트(Lucete) | 대표: 김민희 | 전화: 070-012-3456 | 이메일: lucete@gmail.com</li>
+                <br>
+                <li class="info-list" style="font-size: small;">주소:2222-312,25, Insadong 3-gil, Jongno-gu, Seoul, Republic of Korea</li>
+                <br>
+                <li class="info-list" style="font-size: small;">사업자등록번호:888-06-12345 | 통신판매:2024-서울인사동-0123</li>
+            </ul>
+            
+            
+        </div>
+    </footer>
+</body>
+</html>

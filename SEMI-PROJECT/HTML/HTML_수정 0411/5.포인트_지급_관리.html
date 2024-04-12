@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포인트 관리</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+<style>
+
+    #review_list {
+        background-color: rgb(248,249,253);
+
+    }
+    select {
+    padding: 10px; /* 상하좌우 여백 */
+    border: 1px solid #ccc; /* 테두리 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    background-color: #fff; /* 배경색 */
+    color: #333; /* 글자색 */
+    cursor: pointer;
+    }   
+
+    select:hover {
+        border-color: #999; /* 호버 시 테두리 색상 변경 */
+    }
+
+    select:focus {
+        outline: none; /* 포커스 시 아웃라인 제거 */
+        border-color: #4caf50; /* 포커스 시 테두리 색상 변경 */
+    }
+
+    /* 삭제 및 등록 버튼 스타일 */
+    button {
+        background-color: #4caf50; /* 버튼 배경색 */
+        color: white; /* 버튼 글자색 */
+        padding: 10px 20px; /* 상하좌우 여백 */
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* 호버 효과 전환 */
+        border-radius: 5px; /* 버튼 모서리 둥글게 */
+    }
+
+    button:hover {
+        background-color: #45a049; /* 호버 시 배경색 변경 */
+    }
+
+    /* 테이블 스타일 */
+    table {
+        border-collapse: collapse; /* 테이블 경계 선 제거 */
+    }
+
+    th, td {
+        padding: 10px; /* 셀 안 여백 */
+        border: 1px solid #ddd; /* 셀 테두리 */
+    }
+
+    th {
+        background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+    }
+
+</style>
+
+<script>
+
+    function resetForm() {
+        document.getElementById("myForm").reset();
+    }
+
+    function cancel() {
+      // 취소 동작 정의
+      // 예를 들어, 이전 페이지로 이동하는 코드 등을 여기에 추가
+    }
+
+</script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="containor">
+            <nav class="navbar">
+                <a href="Admin-MainPage.html"><img src="assets/image/로고 누끼(이름만).png" height="90"></a>
+                <ul class="navbar-list" style="list-style: none;">                    
+                    </li>
+                    <li class="navicon"><a href=""><img src="assets/image/로그인 아이콘.png" height="25"></a></li>
+                    <li class="searchBar" >
+                        <input type="search">
+                        <input type="submit">
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div class="category-banner">
+        <nav class="category-navbar">
+
+            
+            <ul class="category-list" style="list-style: none;">
+                <li class="category" style= "font-weight:bolder; font-size: 18px; background-color: transparent !important;">Category</li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Product</li>
+                <li class="category"><a href="Admin-OrderCategory-Page.html">주문관리</a></li>
+                <li class="category"><a href="Admin-ProductCategory-Page.html">상품관리</a></li>
+                <br>
+                <li class="category" style="font-weight: bold; background-color: transparent !important;">Customer</li>
+                
+                <li class="category"><a href="Admin-UserCategory-Page.html">회원관리</a></li>
+                <li class="category"><a href="1.문의_게시판_관리.html">게시판 관리</a></li>
+                <li class="category"><a href="2.리뷰_관리.html">리뷰 게시판 관리</a></li>
+                <li class="category"><a href="3.공지사항_관리.html">공지사항 관리</a></li>
+                <li class="category"><a href="4.쿠폰_관리.html">쿠폰 관리</a></li>
+                <li class="category"><a href="5.포인트_지급_관리.html">포인트 관리</a></li>
+                <li class="category"><a href="Admin-OneDayClass-Category-Page.html">원데이 클래스 관리</a></li>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <h2></h2>
+        <form name="point_issue">
+            <h3>포인트 지급</h3>
+            <table cellspacing="0" border="1" width="760px">
+                <tr>
+                    <td>
+                        <label for="reason"> 지급 사유 </label>&nbsp&nbsp&nbsp&nbsp
+                        <input type="text" id="reason" name="reason">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="purpose">지급 목적</label> &nbsp&nbsp&nbsp
+                <input type="checkbox" id="purpose_all" name="purpose_all" value="전체" checked>
+                <label for="purpose_all"> 배송지연 보상 </label>
+                <input type="checkbox" id="purpose_photo_review" name="purpose_photo_review" value="포토 리뷰" checked>
+                <label for="purpose_photo_review"> 고객 감사  </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="amount">지급 금액</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="text" id="amount" name="amount"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="target_id">지급 대상 ID</label>&nbsp
+                <input type="text" id="target_id" name="target_id"> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="submit">확인</button>
+                        <button type="button" onclick="cancel()">취소</button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <form name="point_search">
+            <h3>포인트 지급 검색</h3>
+            <table cellspacing="0" border="1" width="760px">
+                <tr>
+                    <td>
+                        <label for="start_date">지급 시점</label>&nbsp&nbsp&nbsp&nbsp;
+                        <input type="date" id="start_date" name="start_date"> ~ <input type="date" id="end_date" name="end_date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="reason">지급 사유</label>&nbsp&nbsp&nbsp&nbsp;
+                        <input type="text" id="reason" name="reason">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>지급 목적</label>&nbsp&nbsp&nbsp;
+                        <input type="checkbox" id="purpose_all" name="purpose_all" value="전체" checked>
+                        <label for="purpose_all">배송지연 보상</label>
+                        <input type="checkbox" id="purpose_photo_review" name="purpose_photo_review" value="포토 리뷰" checked>
+                        <label for="purpose_photo_review">고객 감사</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="target_id">지급 대상 ID</label>&nbsp;
+                        <input type="text" id="target_id" name="target_id"> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="submit">검색</button>
+                        <form id="myForm">
+                            <button type="button" onclick="resetForm()">초기화</button>
+                          </form>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+    <form name="point_list">
+        <h3>포인트 지급 사유 목록 (총 1개)</h3>
+
+        <hr>
+
+        <br>
+
+        <table border="1" cellspacing="0" width="760px" height="auto" id="point_reason_list">
+            <colgroup>
+                <col class="w50">
+                <col class="w50">
+                <col class="w100">
+                <col>
+                <col class="w100">
+                <col class="w80">
+                <col class="w60">
+            </colgroup>
+            <thead>
+                <th scope="col">
+                    <input type="checkbox" id="check_all" name="check_all" value="1" onclick="check_all(this.form)">
+                </th>
+                <th scope="col">번호</th>
+                <th scope="col">지급 사유</th>
+                <th scope="col">지급 목적</th>
+                <th scope="col">지급 금액</th>
+                <th scope="col">지급 시점</th>
+                <th scope="col">지급 아이디</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7" class="empty_table" style="text-align: center;">자료가 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</div>
+
+
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+        <div class="containor">
+            <p>L u c e t e</p>
+            <ul class="info" style="list-style: none;">
+                <li class="info-list" style="font-size: smaller;"><a href>이용약관</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="info-list" style="font-size: smaller;"><a href>개인정보 처리방침</a></li>
+                <br><br>
+                <li class ="info-list" style="font-size: small;">상호: 루세트(Lucete) | 대표: 김민희 | 전화: 070-012-3456 | 이메일: lucete@gmail.com</li>
+                <br>
+                <li class="info-list" style="font-size: small;">주소:2222-312,25, Insadong 3-gil, Jongno-gu, Seoul, Republic of Korea</li>
+                <br>
+                <li class="info-list" style="font-size: small;">사업자등록번호:888-06-12345 | 통신판매:2024-서울인사동-0123</li>
+            </ul>
+            
+            
+        </div>
+    </footer>
+</body>
+</html>
